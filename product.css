@@ -1,0 +1,58 @@
+.card h5 {
+    color:rgb(230, 88, 88);
+    font-weight: bold;
+}
+#product-container {
+            margin-top: 90px !important;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            justify-items: center;
+            margin: 30px auto;
+            max-width: 1400px;
+        }
+        .card {
+            background:#fff!important;
+            color:#000!important;
+            border:1px solid #ddd;
+            margin:10px;
+            padding:15px;
+            border-radius:8px;
+            box-shadow:0 0px 0px #0001;
+            display:inline-block;
+            width:240px;
+            vertical-align:top;
+            text-align:center;
+            position: relative;
+            padding-bottom: 56px; /* space for button */
+            }
+
+        .card img {
+            width:160px;
+            height:160px;
+            object-fit:contain;
+            margin-bottom:10px;
+            background:#f8f8f8;
+            border-radius:4px;
+            align-self :center;
+            }
+        .card button {
+            background: #800080;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background .2s;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 16px;
+            width: 80%;
+        }
+
+       
+        .card button:hover {background:#333;}
+
