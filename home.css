@@ -1,0 +1,62 @@
+
+h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+  .video-background {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+  #background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  .overlay-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .neon-button {
+    color: #fff;
+    text-shadow: 0 0 5px #db2be1, 0 0 10px #db2be1, 0 0 20px #db2be1, 0 0 40px #db2be1;
+    background-color: #000;
+    border: 2px solid #db2be1;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    
+      }
+      .neon-button:hover {
+    background-color: #db2be1;
+    border-radius: 50 px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+      }
+      .logo-container .row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: center;
+      }
+      .logo-container .col-auto {
+        flex: 0 0 auto;
+        margin: 0 10px;
+      }

@@ -1,0 +1,374 @@
+   :root {
+    --primary: #3a7bd5;
+    --secondary: #00d2ff;
+    --accent: #ff6b6b;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --purple: #a259ff; /* Added purple color */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-section {
+    flex: 1;
+    background: linear-gradient(135deg, var(--light), var(--purple), var(--light)); /* Added purple */
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.brand-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(login4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.brand-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    color: var(--purple); /* Use purple for logo */
+}
+
+.brand-logo i {
+    margin-right: 15px;
+    color: var(--accent);
+}
+
+.brand-slogan {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 80%;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.brand-features {
+    width: 80%;
+    margin: 2rem 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.feature i {
+    margin-right: 10px;
+    color: var(--purple); /* Use purple for feature icons */
+    font-size: 1.2rem;
+}
+
+.form-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-toggle {
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.form-toggle button {
+    flex: 1;
+    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.form-toggle button.active {
+    color: var(--purple); /* Use purple for active toggle */
+}
+
+.form-toggle button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--purple), var(--purple), var(--purple)); /* Added purple */
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--purple); /* Use purple for form title */
+    font-weight: 700;
+}
+
+.form-subtitle {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem 1rem 0.8rem 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--purple); /* Use purple on focus */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(162,89,255,0.1); /* purple shadow */
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 38px;
+    color: #999;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 1.5rem;
+    color: var(--purple); /* Use purple */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: var(--secondary);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--purple), var(--purple), var(--purple)); /* Added purple */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 0.5rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(162,89,255,0.3); /* purple shadow */
+}
+
+.terms {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.terms a {
+    color: var(--purple); /* Use purple */
+    text-decoration: none;
+}
+
+.social-login {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-login p {
+    margin-bottom: 1rem;
+    color: #666;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.social-icon.google:hover {
+    background-color: #a635b9;
+    color: white;
+    border-color: #a635b9;
+}
+
+.social-icon.facebook:hover {
+    background-color: #a635b9;
+    color: white;
+    border-color: #a635b9;
+}
+
+.social-icon.apple:hover {
+    background-color: #a635b9;
+    color: white;
+    border-color: #a635b9;
+}
+
+.social-icon.purple:hover {
+    background-color: var(--purple);
+    color: white;
+    border-color: var(--purple);
+}
+
+
+
+.phone-img {
+    width: 80px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.5s;
+}
+
+.phone-img:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .brand-section {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .brand-logo {
+        font-size: 2rem;
+    }
+    
+    .brand-slogan {
+        font-size: 1rem;
+    }
+    
+    .form-section {
+        padding: 1.5rem;
+    }
+    
+    .floating-phones {
+        display: none;
+    }
+}
